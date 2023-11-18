@@ -1,13 +1,19 @@
 import './App.css';
 
 function App() {
+  const students = [
+    {name:"Alomgir Vai", id:'22'},
+    {name:"Nayok BappaRaz", id:'23'},
+    {name:"Europe Riyaz", id:'24'},
+    {name:"Mastermind Nisho", id:'25'},
+  ]
+
   return (
     <div className="App">
-      <Person name="Mehedi Hasan" age="21"></Person>
-      <Person name="Hasan" age="20"></Person>
-      <Person name="Omar Faruk" age="22"></Person> 
-      <Person name="Ali Vai" age="25"></Person>
-      <Person></Person>
+
+    {
+      students.map(student => <Person name={student.name} id={student.id}></Person>)
+    } 
        
     </div>
   );
@@ -18,7 +24,7 @@ function Person(props) {
   return (
     <div className='person'>
       <h2>Name: {props.name}</h2>
-      <p>Age: {props.age}</p>
+      <p>ID: {props.id}</p>
     </div>
   )
 }
