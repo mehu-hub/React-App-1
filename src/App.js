@@ -1,40 +1,51 @@
 import './App.css';
 
 function App() {
-  const students = [
-    {name:"Alomgir Vai", id:'22'},
-    {name:"Nayok BappaRaz", id:'23'},
-    {name:"Europe Riyaz", id:'24'},
-    {name:"Mastermind Nisho", id:'25'},
+
+  const products = [
+    {
+      name: 'Laptoop',
+      price: 41000,
+      storage: '500GB'
+    },
+    {
+      name: 'iPhone',
+      price: 40000,
+      storage: '16GB'
+    },
+    {
+      name: 'Smart Watch',
+      price: 1800,
+      storage: '2Gb'
+    }
+
   ]
 
   return (
     <div className="App">
-
-    {
-      students.map(student => <Person name={student.name} id={student.id}></Person>)
-    } 
-       
+      {
+        products.map(product =>
+          <Products
+            name={product.name}
+            price={product.price}
+            storage={product.storage}>
+          </Products>)
+      }
     </div>
   );
 }
 
-function Person(props) {
-  console.log(props)
+
+function Products(props) {
   return (
-    <div className='person'>
+    <div className='product'>
       <h2>Name: {props.name}</h2>
-      <p>ID: {props.id}</p>
+      <h4>Price: {props.price}</h4>
+      <h4>Storage: {props.storage}</h4>
     </div>
   )
 }
 
-function Person2() {
-  return (
-    <div className='person2'>
-      <h2>Hasan Mehedi</h2>
-    </div>
-  )
-}
+
 
 export default App;

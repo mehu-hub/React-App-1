@@ -38,14 +38,14 @@
 }
 
 
-.person{
+.product{ 
+  align-items: center;
   background-color: #61dafb;
-  padding: 20px; 
-  margin: 20px;
-  border: 2px solid red;
-  border-radius: 20px;
-}
-.person2{
-  background-color: rgb(231, 128, 128);
   padding: 20px;
+  border-radius: 15px;
+  margin: 20px;
+  width: 500px;
+}
+.product h2{
+  color: rgb(105, 3, 3);
 }
