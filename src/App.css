@@ -37,15 +37,17 @@
   }
 }
 
-
-.product{ 
-  align-items: center;
-  background-color: #61dafb;
+.count{
+  background: #000;
+  width: 400px;
+  color: white;
   padding: 20px;
-  border-radius: 15px;
   margin: 20px;
-  width: 500px;
+  border-radius: 20px;
 }
-.product h2{
-  color: rgb(105, 3, 3);
+.count h2{
+  color: salmon;
+}
+.count button{
+  margin-left: 10px;
 }

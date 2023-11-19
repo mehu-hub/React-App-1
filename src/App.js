@@ -1,51 +1,23 @@
+import { useState } from 'react';
 import './App.css';
 
-function App() {
+function App() { 
+  const [count, setCount] = useState(0)
 
-  const products = [
-    {
-      name: 'Laptoop',
-      price: 41000,
-      storage: '500GB'
-    },
-    {
-      name: 'iPhone',
-      price: 40000,
-      storage: '16GB'
-    },
-    {
-      name: 'Smart Watch',
-      price: 1800,
-      storage: '2Gb'
-    }
-
-  ]
+  const increaseCount = () => setCount(count + 1);
+  const decreaseCount = () => setCount(count - 1);
 
   return (
     <div className="App">
-      {
-        products.map(product =>
-          <Products
-            name={product.name}
-            price={product.price}
-            storage={product.storage}>
-          </Products>)
-      }
+      <div className='count'>
+        <h2>Count: {count}</h2>
+        <button onClick={increaseCount}>Increase</button>
+        <button onClick={decreaseCount}>Decrease</button>
+      </div>
+
     </div>
   );
 }
-
-
-function Products(props) {
-  return (
-    <div className='product'>
-      <h2>Name: {props.name}</h2>
-      <h4>Price: {props.price}</h4>
-      <h4>Storage: {props.storage}</h4>
-    </div>
-  )
-}
-
 
 
 export default App;
